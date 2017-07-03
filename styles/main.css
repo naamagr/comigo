@@ -1,0 +1,91 @@
+@media all and (max-width: 700px) , (max-device-width: 700px){
+  .main-menu{
+    display: none;
+  }
+}
+
+a{
+  text-decoration: none;
+  cursor: hand;
+}
+
+ul
+{
+  list-style: none;
+}
+
+.upper-level-menu  a{
+  color:#3d3d3d;
+}
+.upper-level-menu > li > a:hover,
+.upper-level-menu > li > a:focus,
+.engagement h3:hover,
+.engagement h3:focus{
+  outline: none;
+  color:#f14848;
+}
+
+main a,
+.lower-level-menu a:hover,
+.lower-level-menu a:focus,
+.blog span,
+.blog h2{
+  color: white;
+  outline: none;
+  background-color:#f14848 ;
+}
+
+.white-background-link{
+  color:#f14848;
+  background-color: white;
+}
+
+.engagement h3{
+  color: #606060;
+}
+
+.blog p{
+  color: white;
+}
+
+.lower-footer
+{
+  background-color: rgb(21,21,21);
+  color: rgb(99,99,99);
+}
+
+
+.lower-footer a:link,
+.lower-footer a:visited
+{
+  color: hsl(9, 0%, 39%);
+}
+
+.lower-footer a:hover,
+.lower-footer a:focus {
+  outline: none;
+  color: white;
+}
+
+.footer{
+  background-color: #1e2024;
+}
+
+
+.footer ul{
+  list-style: none;
+}
+
+.first-level-footer-menu > li > a{
+  color: white ;
+}
+
+.second-level-footer-menu a{
+color: #7a7a7a;
+}
+
+.second-level-footer-menu a:hover,
+.second-level-footer-menu a:focus{
+  outline: none;
+  color: #f14848;
+}
