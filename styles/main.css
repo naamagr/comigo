@@ -16,7 +16,8 @@ html {
 body {
   font-family: 'Source Sans Pro', sans-serif;
   font-weight: 300;
-  margin: 0;
+padding-top: 66px;
+  margin-left: 0;
 }
 
 a {
@@ -34,33 +35,93 @@ h1 span {
   display: block;
 }
 
+header{
+  top:0;
+  position: fixed;
+  width: 100%;
+  height: 66px;
+  background-color: white;
+  line-height: 66px;
+  padding-left: 10px;
+  text-align: right;
+  z-index: 2;
+}
+
+header>a{
+  display: inline-block;
+  position: absolute;
+  left: 0;
+}
+
+header>a img{
+  vertical-align: middle;
+}
+
+.main-menu{
+  /*position: absolute;*/
+  height: 66px;
+  margin: auto;
+  display: inline-block;
+  right: 0;
+  line-height: 66px;
+}
+
+.main-menu>ul>li>a{
+  margin-right: 30px;
+}
+
 .main-menu a {
   color: #3d3d3d;
+  display: block;
+  height: 100%;
 }
 
-.lower-level-menu ul {
-
+.main-menu li{
+  display: inline-block;
 }
 
+
+.lower-level-menu a{
+  line-height: 4.7;
+  font-size: 2.3rem;
+  font-weight: 300;
+}
 .lower-level-menu li {
   display: inline-block;
-  width: 33%;
-  vertical-align: top;
+  width: 33.1%;
 }
 
 .lower-level-menu ul li {
-  width: 150%;
+  width: 49.8%;
 }
 
-.main-menu ul li:hover > ul > li > a {
+.main-menu ul li:hover>ul{
+  display: block;
+  background-color: rgb(250,250,250);
+}
+
+.lower-level-menu ul{
+display: none;
+  width: 100%;
+}
+
+.lower-level-menu ul li:hover ul{
   display: block;
 }
 
-.lower-level-menu a {
-  border: dotted;
+.lower-level-menu{
   display: none;
-  height: 100px;
+  position: absolute;
+  top:100%;
+  left: 0;
+  width: 100%;
+}
+
+.lower-level-menu li {
+  /*border: dotted;*/
+  height: 170px;
   text-align: center;
+  vertical-align:middle;
 }
 
 .upper-level-menu .active a {
@@ -74,6 +135,15 @@ h1 span {
 .engagement h3:focus {
   outline: none;
   color: #f14848;
+}
+
+.main-menu .whatchapp-link{
+  line-height: 1;
+  padding-top: 1.4em;
+}
+
+.main-menu .whatchapp-link span{
+display: block;
 }
 
 .ott-shine {
@@ -98,14 +168,25 @@ h1 span {
 }
 
 .red-background-link,
-.white-background-link {
+.white-background-link,
+.social-network-red-link {
   border-radius: 48px;
   font-size: 0.8rem;
-  padding: 17px 40px;
   display: inline-block;
   letter-spacing: 1.5px;
   font-weight: 400;
 }
+
+.social-network-red-link{
+padding: 17px 17px;
+}
+
+.red-background-link,
+.white-background-link {
+padding: 17px 40px;
+}
+
+
 
 .why-comigo {
   height: 35vw;
@@ -133,12 +214,21 @@ h1 span {
 }
 
 .engagement{
+  background-color: #c04850;
   height:40vw;
-  padding-left: 17%;
+  position: relative;
+  padding-left: 15%;
+  overflow: hidden;
+  padding-top: 4%;
+
 }
 .engagement h2 {
   display: inline-block;
-  width: 145px;
+  width: 17%;
+  margin-top: 0;
+  color: white;
+  font-weight: 300;
+  line-height: 1.4;
 }
 
 span.caps {
@@ -149,42 +239,92 @@ font-size: 2rem;
 
 span.sub-header {
 font-size: 1rem;
+  font-weight: 300;
 }
 
 .engagement h3 {
+  line-height: 2.7em;
+  margin: 0;
   color: #606060;
-  width: 25%;
+  font-weight: 300;
 }
 
 .engagement-content{
   display: inline-block;
   margin-left: 14%;
-  width: 65%;
+  width: 15%;
   vertical-align: top;
   line-height: 1.7;
-  position: relative;
 }
 
 .engagement figcaption{
-  margin-bottom: 7%;
+  margin: 0 auto 7% auto;
   width: 65%;
+  text-align: center;
+  color: white;
 }
 
-.engagement-content li h3:hover~figure{
+.engagement figure{
+  height: 100%;
+  margin: 0;
+}
+
+
+.engagement ul li:nth-of-type(1) img,
+.engagement ul li:nth-of-type(4) img,
+.engagement ul li:nth-of-type(6) img{
+  width: 20vw;
+}
+.engagement ul li:nth-of-type(2) img
+{
+  width: 38vw;
+}
+
+.engagement ul li:nth-of-type(3) img,
+.engagement ul li:nth-of-type(5) img{
+  width: 30vw;
+}
+
+.engagement ul li img{
+  height: auto;
+}
+.engagement-content li:hover figure,
+.engagement-content li:last-of-type figure{
   display: inline-block;
   position: absolute;
+  text-align: center;
+  top: 9%;
+  right: 3%;
+}
+
+.engagement-content li:last-of-type figure{
+  right: 6%;
+}
+
+.engagement-content li:hover video{
+  position: absolute;
+  /*display: block;*/
   top: 0;
-  right: -15%;
+  left: 0;
+  width: 100%;
+  height: auto;
 }
 
 .engagement-content li figure{
   display: none;
 }
+
 .engagement-content li video{
   display: none;
 }
 
+
+.engagement-content li:hover~li figure{
+  display: none;
+}
+
 a.red-background-link,
+.social-network-red-link,
 .lower-level-menu a:hover,
 .lower-level-menu a:focus,
 .blog span,
@@ -235,6 +375,37 @@ background-color: #f14848;
   width: 55%
 }
 
+
+.experience{
+  height: 45vw;
+  padding-top: 5%;
+  position: relative;
+  overflow: hidden;
+}
+
+.experience-text{
+  display: inline-block;
+  margin-left: 10%;
+  width: 20%;
+}
+
+.experience-text h2{
+  font-size: 2.8rem;
+  font-weight: 300;
+  margin-bottom: 10%;
+}
+
+.experience-text p{
+  margin-bottom: 10%;
+}
+
+.experience img{
+  position: absolute;
+  right: -6%;
+  width: auto;
+  height: 82%;
+}
+
 .blog {
   height: 36vw;
   display: block;
@@ -250,9 +421,11 @@ background-color: #f14848;
   background-color: #f14848;
   width: 16.66666%;
   position: relative;
+  z-index: 1;
 }
 
 .blog-header-content{
+  text-align:left;
   position: absolute;
   bottom: 10%;
   left:10%;
@@ -274,6 +447,8 @@ background-color: #f14848;
 
 .blog li {
   width: 20%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .blog li a {
@@ -284,24 +459,19 @@ background-color: #f14848;
 }
 
 .blog li:nth-of-type(1) {
-  background: url("../assets/blog/ibc_post_EI-750x508.png") no-repeat;
-  background-size: cover;
+  background-image: url("../assets/blog/ibc_post_EI-750x508.png");
 }
 .blog li:nth-of-type(2) {
-  background: url("../assets/blog/IMG_9294-750x563.jpeg") no-repeat;
-  background-size: cover;
+  background-image: url("../assets/blog/IMG_9294-750x563.jpeg");
 }
 .blog li:nth-of-type(3) {
-  background: url("../assets/blog/Image-Blog-Yoav_356121362-copy-750x563.jpg") no-repeat;
-  background-size: cover;
+  background-image: url("../assets/blog/Image-Blog-Yoav_356121362-copy-750x563.jpg");
 }
 .blog li:nth-of-type(4) {
-background: url("../assets/blog/post_tv_connect-750x508.jpeg") no-repeat;
-background-size: cover;
+  background-image: url("../assets/blog/post_tv_connect-750x508.jpeg");
 }
 .blog li:nth-of-type(5) {
-background: url("../assets/blog/post_quality-750x508.jpeg") no-repeat;
-background-size: cover;
+background-image: url("../assets/blog/post_quality-750x508.jpeg");
 }
 
 .blog p {
@@ -326,6 +496,18 @@ background-size: cover;
   line-height: 2;
 }
 
+.lower-footer{
+
+}
+
+.lower-footer ul,
+.lower-footer li,
+.lower-footer address,
+.lower-footer p{
+  display: inline-block;
+  text-align: justify;
+}
+
 .lower-footer a:link,
 .lower-footer a:visited {
   color: hsl(9, 0%, 39%);
@@ -345,6 +527,9 @@ background-size: cover;
   list-style: none;
 }
 
+.first-level-footer-menu{
+  margin: 0;
+}
 .first-level-footer-menu > li > a {
   color: white;
 }
